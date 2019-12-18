@@ -1,0 +1,59 @@
+public class verbatimDriver
+    {
+        // Variables for character stats
+        private int age;
+        private  String name;
+        private String birthDate;
+        private String background;
+        // declaring what the variables have
+        public verbatimDriver()
+        {
+            age = 0;
+            name = null;
+            birthDate = null;
+            background = null;
+        }
+        // Contructer list
+        public verbatimDriver(String Name, int Age, String BirthDate, String Background)
+        {
+            this.name = Name;
+            this.age = Age;
+            this.birthDate = BirthDate;
+            this.background = Background;
+        }// end multi-arg contructer
+        // Getters for variables
+        public int getAge()
+        {
+            return age;
+        }
+
+        public String getBirth()
+        {
+            return birthDate;
+        }
+
+        public String getName()
+        {
+            return name;
+        }
+
+        public String getbackground()
+        {
+            return background;
+        }
+        // To string to print out object methods
+        public String toString()
+        {
+            String output = "";
+            output += name;
+            output += age;
+            output += birthDate;
+            output += background;
+
+            return output;
+        }// end od to String
+
+
+    }// end class verbatimDriver
+
+
