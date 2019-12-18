@@ -1,0 +1,38 @@
+
+public class objects implements Comparable<objects>
+{
+    // Variables
+    private int survivalKnife;
+    private int notebook;
+    // declaring what the variables have
+
+    // Constructer
+    public objects(int Amount) {
+        this.survivalKnife = Amount;
+        this.notebook = Amount;
+
+    }// end of objects
+
+    //Getter fo it can print out the inventory
+    public int getKnife() {
+        return survivalKnife;
+    }//end of getter
+
+    public int getNotebook() {
+        return notebook;
+    }// end of getter
+    // compareTo method comparing the knife with notebook
+// and how many are in the inventory
+    public int compareTo(objects notebook) {
+        if (this.survivalKnife > notebook.notebook) {
+            return -1;
+        } // end of if
+        else if (this.survivalKnife == notebook.notebook) {
+            return 0;
+        }//end of else
+        return 1;
+    }// end of compareTo
+
+}
+// end of objects
+
