@@ -1,0 +1,354 @@
+import java.util.Scanner;
+public class Verbatim
+{
+    public static void main(String args[]) {
+        Scanner keyboard = new Scanner(System.in);
+
+
+        String[] start = {"start", "Start", "START"};// string that lets the user type in start
+
+        String startGame;
+
+        boolean found1 = false;
+
+
+        System.out.println("To start game type in Start");// tells the user what to do
+        startGame = keyboard.nextLine();
+// Gets the user inputs
+        for (String starts : start)
+            if (startGame.equals(starts))
+                found1 = true;
+// Game starter
+        if (found1)
+            System.out.println("Loading...");
+        else {
+            System.out.println("Error");
+            return;
+        }
+
+        System.out.println("How to play:\n" +
+                "If you want to inspect a character you have met type in their name\n" +
+                "if it is family you can type in mom, dad, or if you know the name of the member.");
+
+
+        //////// PART TWO ///////////////
+
+        String entity;
+
+        String yes;
+        String[] choice1 = {"yes", "yes ", "Yes", "Yes "};
+        boolean found2 = false;
+        // storyline start
+        System.out.println("What is the name of your entity?");// asks the user to enter a name
+        entity = keyboard.nextLine();
+        System.out.println("Information has been deleted.");// part of the story
+        System.out.println("Is your entities name Annabelle?");
+        entity = keyboard.nextLine();
+        System.out.println("Information has been deleted.");
+        ///// Scene one INRODUCTION OF STORY //////
+        System.out.println("You wake up in your room. Do you choose to walk around your room?\nYes or No");
+        yes = keyboard.nextLine();
+// gets users inputs
+        for (String Yes : choice1)
+            if (yes.equals(Yes))
+                found2 = true;
+
+        if (found2) {
+            System.out.println("You walked around and found a survival kit knife.\nWill you take it?");
+            yes = keyboard.nextLine();
+
+            // Creating choices within choices
+            for (String Yes : choice1)
+                if (yes.equals(Yes))
+                    found2 = true;
+            //outcome of choices
+            if (found2) {
+                System.out.println("You took the survival kit knife...\nyou left your room and went to school making no eye contact with your family.");
+            }
+            else
+            {
+                System.out.println("You left the knife and walk out..");
+            }// end of else
+        }//end if
+        else
+        {
+            System.out.println("You go to your door. Would you like to exit your room?");
+            yes = keyboard.nextLine();
+
+            // creating choices within choices
+            for (String Yes : choice1)
+                if (yes.equals(Yes))
+                    found2 = true;
+            //outcome of choices
+            if (found2) {
+                System.out.println("You've exited the room and see your family..." +
+                        "\nYour mother says that they love you and to have a good time at school...\nyou feel loved.");
+            }// end if statment
+            else {
+                System.out.println("You stay in your room...\nYour mother knocks and screams to go to school...\nyou feel unloved.");
+            }//end else statment
+        }//end else
+// SCENE TWO
+        System.out.println("You start walking to the bus stop waiting for the school bus...\n" +
+                "You see your best friend Rose... She goes off ranting about her boyfriend\n"+
+                "Rose seems upset.. (Your anxiety levels rise)" +
+                "\nDo you comfort her or comfort yourself?\n"+
+                "(op1 or op2)");
+        String Op1;
+        String Op2;
+        boolean found8 = false;
+        boolean found9 = false;
+        String[] op1 = {"OP1", "op1", "Op1"};// Option 1
+        String[] op2 = {"Op2", "OP2", "op2"};// Option 2
+        Op1 = keyboard.nextLine();
+
+        for (String ops : op1)
+            if (Op1.equals(ops))
+                found8 = true;
+//        for (String oop : op2)
+//            if (Op2.equals(oop))
+//                found9 = true;
+        if(found8)
+            System.out.println("You hugged Rose...\n"+
+                    "(your love increased) lv1");// Choice one of scene two
+        else //if(found9)
+        {
+            System.out.println("You comforted yourself by counting");
+            for(int i = 1; i <= 10; i++)
+            {
+                System.out.println(i);
+            }// For loop counting to ten
+            System.out.println("Again...");
+            for(int i = 1; i <= 5; i++)
+            {
+                System.out.println(i);
+            }// For loop counting to ten
+            System.out.println("And again...");
+            for(int i = 1; i < 11; i++)
+            {
+                System.out.println(i);
+            }// For loop counting to ten
+            System.out.println("You comforted yourself\n"+
+                    "(Your lOVE increased) LV1\n" +
+                    "Rose seems to grow quiet\n");
+        }//end of else
+// Story: love is level of kindness and LOVE is level of violence.
+
+        System.out.println("The school bus arrives...\n" +
+                "You and Rose walk in and take a seat.\n" +
+                "(You think everyone in the bus is loud... and Rose is upset... Your anxiety levels rise)\n" +
+                "Choose to draw a triangle?(Yes or no)\n");
+        //choice in saying yes or no
+
+
+        String No;
+        No = keyboard.nextLine();
+        String[] no = {"no", "NO", "No"};
+        boolean found14 = false;
+
+        for (String nos : no)
+            if (No.equals(nos))
+                found14 = true;
+// drawing the triangle if statement
+        if(found14)
+        {
+            System.out.println("(You stare blankly)");
+        }// end of if statement
+        else {
+
+            int rows = 5;
+            for (int i = 1; i <= rows; i++) {
+
+                //Spaces out each star per row
+                for (int j = rows; j >= i; j--) {
+                    System.out.print(" ");
+                }
+                // number of stars in each row
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("* ");
+                }
+                //prints out the triangle
+                System.out.println();
+            }
+        }
+
+        System.out.println("The bus arrives to school...\n" +
+                "Three Periods pass and you and Rose meet up for lunch.\n" +
+                "(You asked Rose if she is ok....)" +
+                "Rose said yes...\n" +
+                "Rose: \"let me get you a drink\"\n" +
+                "(You drink the drink... and pass out after 3 minutes...)\n");
+        System.out.println("You wake up in a forest... but your not alone...\n" +
+                "Do you want to walk around the forest?\n(yes or no)");
+
+        yes = keyboard.nextLine();
+        found2 = false;
+        for (String Yes : choice1) {
+            if (yes.equals(Yes)) {
+                found2 = true;
+            }
+        }
+        //outcome of choices
+        if (!found2) {
+            System.out.println("It is insanely quiet.. Like you belong..\n");
+        }//end else statment
+        else {
+            System.out.println("You found a treasure chest\n");
+        }// end if statment
+
+//                if (found2)
+//                    System.out.println("You found a treasure chest.");
+//                else
+//                    System.out.println("It is insanely quiet... like you belong...\n");
+
+        System.out.println("!!!!!!");
+        System.out.println("You hear something...\n" +
+                "Do you equip Survival Knife?\n" +
+                "(Yes or No)");
+
+        yes = keyboard.nextLine();
+        found2 = false;
+        for (String Yes : choice1)
+            if (yes.equals(Yes))
+                found2 = true;
+        //outcome of choices
+        if (!found2) {
+            System.out.println("You stay still...");
+        }
+        // end if statment
+        else {
+            System.out.println("|Survival Knife has been equipped|");
+        }
+
+        //end else statment
+//                if (found2) {
+//                    System.out.println("|Survival Knife has been equipped|");
+//                } else {
+//                    System.out.println("You stay still...");
+//                }
+
+        System.out.println("♎︎□︎■︎⧫︎ ❍︎□︎❖︎♏︎ ♓︎⧫︎⬧︎ ❑︎◆︎♓︎♏︎⧫︎\n" +
+                "⬧︎⧫︎♋︎⍓︎ ⬧︎⧫︎♓︎●︎●︎ ♓︎⧫︎⬧︎ ◆︎■︎⬧︎♋︎♐︎♏︎\n" +
+                "⬥︎♏︎●︎♍︎□︎❍︎♏︎ ⧫︎□︎ ⧫︎♒︎♏︎ ♎︎♋︎❒︎ ♐︎□︎❒︎♏︎⬧︎⧫︎\n" +
+                "❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎\n" +
+                "❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎\n" +
+                "❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎ ❒︎□︎♋︎❒︎\n");
+        System.out.println("TO BE CONTINUED...");
+// end of game Demo
+
+/////// objects in invontory /////////
+        objects knife = new objects( 1);
+        objects noteBook = new objects(2);
+        // objects someObject = new objects ();
+        System.out.println("\nInventory");
+        System.out.println("Survival Knife " + knife.getKnife());
+        System.out.println("Notebook " + noteBook.getNotebook());
+
+
+/////// End of Inventory ////////////
+
+        /////////////// CHARACTERS STATS //////////////////////
+        //Objects of characters known to the user
+        verbatimDriver Rose1 = new verbatimDriver("Rose ", 12 , " Oct 19 ", " Always talks about her boyfriend Liam.");
+        verbatimDriver Annabelle1 = new verbatimDriver("Annabelle ", 12," Mar 5 ", " Diagnosed with controllable OCD and schizophrenia and is sad all the time but doesn't know why.");
+        verbatimDriver Mom1 = new verbatimDriver("Carla ", 45, " Nov 17 ", " Depressed but trys her best to keep up.");
+        verbatimDriver Dad1 = new verbatimDriver("Bruce ", 47, " May 15 ", " Stopped being an Alcholic but sits on the couch everyday staring at nothing.");
+        verbatimDriver Josh1 = new verbatimDriver("Josh ", 13, " May 5 ", " Annabelles older brother that wears black and is mute.");
+
+        //String names
+        String[] Rose = {"Rose", "rose", "ROSE"};
+        String[] Annabelle = {"Annabelle", "annabelle", "ANNABELLE"};
+        String[] Mom = {"mom","Mom","Carla", "carla", "CARLA", "MOM"};
+        String[] Dad = {"Bruce","bruce", "dad", "Dad", "DAD", "BRUCE"};
+        String[] Josh = {"Josh","josh", "JOSH"};
+
+        //if statement in the context of a for loop
+        int roseAge = 12;
+        int annabelleAge = 12;
+        if (roseAge >= annabelleAge && roseAge <= annabelleAge)
+        {
+            for(int i = 1; i <= 1; i++)
+                System.out.println("Rose and Annabelle are the same age.");
+        }
+
+        // Individual names for each character
+        String rose;
+        String annabelle;
+        String mom;
+        String dad;
+        String josh;
+// false statements that are assigned to each character
+        boolean found3 = false;
+        boolean found4 = false;
+        boolean found5 = false;
+        boolean found6 = false;
+        boolean found7 = false;
+        // roses background
+        System.out.println("\nCheck out character stats?");
+        rose = keyboard.nextLine();
+        for (String roses : Rose) {
+            if (rose.equals(roses))// when found is true it prints out the characters stats
+            {
+                System.out.println();
+                found3 = true;
+                if (found3)
+                    System.out.println(Rose1.getName() + "Age "  + Rose1.getAge() + " Birth" + Rose1.getBirth() + Rose1.getbackground());
+            }
+        }
+
+        // Annabelle background
+        annabelle = keyboard.nextLine();
+        for (String annabelles : Annabelle) {
+            if (annabelle.equals(annabelles))// when found is true it prints out the characters stats
+                found4 = true;
+            if(found4)
+                System.out.println(Annabelle1.getName() + "Age " + Annabelle1.getAge() + " Birth" + Annabelle1.getBirth() + Annabelle1.getbackground());
+        }
+
+        //carlas background
+        mom = keyboard.nextLine();
+        for (String moms : Mom) {
+            if (mom.equals(moms))// when found is true it prints out the characters stats
+                found5 = true;
+            if(found5)
+                System.out.println(Mom1.getName() + "Age" +  Mom1.getAge() + " Birth " + Mom1.getBirth() + Mom1.getbackground());
+        }
+
+        // Bruces background
+        dad = keyboard.nextLine();
+        for (String dads : Dad) {
+            if (dad.equals(dads))// when found is true it prints out the characters stats
+                found6 = true;
+            if(found6)
+                System.out.println(Dad1.getName() + "Age " + Dad1.getAge() + " Birth " + Dad1.getBirth() + Dad1.getbackground());
+        }
+
+        // Joshes background
+        josh = keyboard.nextLine();
+        for (String joshs : Josh) {
+            if (josh.equals(joshs))// when found is true it prints out the characters stats
+                found7 = true;
+            if (found7)
+                System.out.println(Josh1.getName() + "Age " + Josh1.getAge() + " Birth " + Josh1.getBirth() + Josh1.getbackground());
+        }
+        // print lines of objects Failed so moved
+//        if (found3)
+//            System.out.println(Rose1.getName() + Rose1.getAge() + Rose1.getBirth() + Rose1.getbackground());
+//        else if(found4)
+//            System.out.println(Annabelle1.getName() + Annabelle1.getAge() + Annabelle1.getBirth() + Annabelle1.getbackground());
+//        else if(found5)
+//            System.out.println(Mom1.getName() + Mom1.getAge() + Mom1.getBirth() + Mom1.getbackground());
+//        else if(found6)
+//            System.out.println(Dad1.getName() + Dad1.getAge() + Dad1.getBirth() + Dad1.getbackground());
+//        else if (found7)
+//            System.out.println(Josh1.getName() + Josh1.getAge() + Josh1.getBirth() + Josh1.getbackground());
+////////////////// END OF CHARACTER STATS /////////////////////
+
+// End of running game
+
+
+    }// end of public main
+}//end of class
+
+
+
